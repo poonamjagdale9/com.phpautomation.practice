@@ -12,7 +12,7 @@ public class RegressionTests extends BaseClass {
     PriceDropPage priceDropPage = new PriceDropPage();
     ProductDescriptionPage productDescriptionPage = new ProductDescriptionPage();
     CartPage cartPage = new CartPage();
-    @Test
+    @Test   
     public void urlTest(){
         String actualUrl = homePage.validatePhpAutomationUrl();
         Assert.assertEquals(actualUrl,"http://automationpractice.com/index.php");
@@ -90,7 +90,7 @@ public class RegressionTests extends BaseClass {
         signInPage.validateSelect_titleRadiobtn();
         signInPage.validatePersonalInformation("Tom","Peter","password");
         signInPage.validateBirthDayDropBox();
-        signInPage.validateAddress("Abc corporation","75 Sibley","New York","E12 6sd","07404346");
+        signInPage.validateAddress("Abc corporation","75 Sibley","New York","Rm 16 2ns","07404346");
         String error_message =signInPage.validate_error_message();
         Assert.assertEquals(driver.findElement(By.xpath("//li[contains(text(),\"The Zip/Postal code you've entered is invalid. It\")]")).getText(),
                error_message);
